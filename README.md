@@ -17,6 +17,16 @@ SnowLuma 是 QQ 客户端的 TypeScript 互操作运行时：将 QQ 原生会话
 - [问题反馈](https://github.com/lin-414/Releases/issues)
 - QQ 群：<https://qm.qq.com/q/g3UMLpWALe> · Telegram：<https://t.me/napcatqq>
 
+## 从原版 2.4.2 迁移
+
+原公开仓库已停止维护并转为私有维护。旧版 2.4.2 安装的**应用内自动更新已失效**（其更新源指向的旧仓库地址不再提供服务），需要手动迁移一次：
+
+1. 从 [Releases](https://github.com/lin-414/Releases/releases) 下载 v2.5.0 或更新的完整发行包，**解压到新目录**运行，不要覆盖旧安装目录。
+2. 配置与数据：先用旧实例 WebUI 的备份功能导出，再到新实例导入；不确定数据位置时以旧实例导出的备份为准。
+3. 迁移完成后，应用内更新检查将指向本仓库，此后可正常自动更新。
+
+Docker 用户请改用基于本仓库发行包构建的新镜像；SDK / MCP 用户升级到对应 npm 版本即可。
+
 ## 说明
 
 - `compat/qq.json` 为 QQ 兼容性清单，客户端启动时从本仓库 `main` 分支拉取，校验本地 QQ 版本。
